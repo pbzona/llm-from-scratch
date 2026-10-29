@@ -1,0 +1,27 @@
+[project]
+name = "llm-from-scratch"
+version = "0.1.0"
+description = "Runnable examples from Build a Large Language Model (From Scratch)"
+readme = "README.md"
+authors = [
+    { name = "Phil Zona", email = "phil.zona@vercel.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26,<3",
+    "tiktoken>=0.7,<1",
+    "torch>=2.6,<3",
+]
+
+[project.scripts]
+llm-from-scratch = "llm_from_scratch:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+    "ruff>=0.11,<1",
+]
